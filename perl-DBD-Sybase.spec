@@ -25,7 +25,7 @@ DBD::Sybase - sterownik DBI do Sybase i MS SQL.
 
 %build
 SYBASE=/usr ; export SYBASE
-perl Makefile.PL </dev/null
+%{__perl} Makefile.PL </dev/null
 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
