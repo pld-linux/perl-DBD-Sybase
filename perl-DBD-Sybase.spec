@@ -2,10 +2,10 @@
 %define	pdir	DBD
 %define	pnam	Sybase
 Summary:	DBD::Sybase - Sybase database driver for the DBI module
-Summary(pl):	DBD::Sybase - staerownik DBI do bazy danych Sybase
+Summary(pl):	DBD::Sybase - sterownik DBI do bazy danych Sybase
 Name:		perl-DBD-Sybase
 Version:	1.02
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -30,6 +30,8 @@ UNIX-a/Linuksa do serwerów bazodanowych MS-SQL 7 lub 2000.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+
+%{__perl} -pi -e 's@/lib([ "])@/%{_lib}$1@g' Makefile.PL
 
 %build
 SYBASE=/usr ; export SYBASE
