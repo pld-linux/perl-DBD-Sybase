@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	DBD
-%define	pnam	Sybase
+%define		pdir	DBD
+%define		pnam	Sybase
 Summary:	DBD::Sybase - Sybase database driver for the DBI module
 Summary(pl):	DBD::Sybase - sterownik DBI do bazy danych Sybase
 Name:		perl-DBD-Sybase
