@@ -1,24 +1,32 @@
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	DBD
-%define	pnam	Sybase
-Summary:	DBD::Sybase perl module
-Summary(pl):	Modu³ perla DBD::Sybase
+%define		pdir	DBD
+%define		pnam	Sybase
+Summary:	DBD::Sybase - Sybase database driver for the DBI module
+Summary(pl):	DBD::Sybase - staerownik DBI do bazy danych Sybase
 Name:		perl-DBD-Sybase
-Version:	0.95
+Version:	1.04
 Release:	1
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	5ae8851689ba4be5e0b08b0fb2c242d3
 BuildRequires:	freetds-devel
 BuildRequires:	perl-DBI >= 1.00
 BuildRequires:	rpm-perlprov >= 4.0.2-104
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-DBD::Sybase - a Sybase and MS SQL DBI driver.
+DBD::Sybase is a Perl module which works with the DBI module to
+provide access to Sybase databases. With FreeTDS DBD::Sybase can be
+also used to query a MS-SQL 7 or 2000 database server from a
+UNIX/Linux host.
 
 %description -l pl
-DBD::Sybase - sterownik DBI do Sybase i MS SQL.
+DBD::Sybase jest modu³em Perla wspó³pracuj±cym z modu³em DBI i
+umo¿liwiaj±cym dostêp do baz danych Sybase. Przy wykorzystaniu
+FreeTDS, DBD::Sybase mo¿na równie¿ wykorzystaæ do dostêpu z poziomu
+UNIX-a/Linuksa do serwerów bazodanowych MS-SQL 7 lub 2000.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -27,7 +35,8 @@ DBD::Sybase - sterownik DBI do Sybase i MS SQL.
 SYBASE=/usr ; export SYBASE
 %{__perl} Makefile.PL </dev/null
 
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
