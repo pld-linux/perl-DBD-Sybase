@@ -5,13 +5,13 @@ Summary:	DBD::Sybase perl module
 Summary(pl):	Modu³ perla DBD::Sybase
 Name:		perl-DBD-Sybase
 Version:	0.95
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	freetds-devel
 BuildRequires:	perl-DBI >= 1.00
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,7 +25,8 @@ DBD::Sybase - sterownik DBI do Sybase i MS SQL.
 
 %build
 SYBASE=/usr ; export SYBASE
-%{__perl} Makefile.PL </dev/null
+%{__perl} Makefile.PL </dev/null \
+	INSTALLDIRS=vendor 
 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
@@ -44,9 +45,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc BUGS CHANGES README
-%{perl_sitearch}/DBD/Sybase.pm
-%dir %{perl_sitearch}/auto/DBD/Sybase
-%{perl_sitearch}/auto/DBD/Sybase/Sybase.bs
-%attr(755,root,root) %{perl_sitearch}/auto/DBD/Sybase/Sybase.so
+%{perl_vendorarch}/DBD/Sybase.pm
+%dir %{perl_vendorarch}/auto/DBD/Sybase
+%{perl_vendorarch}/auto/DBD/Sybase/Sybase.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/DBD/Sybase/Sybase.so
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
