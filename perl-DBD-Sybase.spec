@@ -36,7 +36,8 @@ SYBASE=/usr ; export SYBASE
 %{__perl} Makefile.PL </dev/null \
 	INSTALLDIRS=vendor
 
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
