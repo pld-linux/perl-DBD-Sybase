@@ -4,13 +4,13 @@
 Summary:	DBD::Sybase - Sybase database driver for the DBI module
 Summary(pl):	DBD::Sybase - sterownik DBI do bazy danych Sybase
 Name:		perl-DBD-Sybase
-Version:	1.02
-Release:	2
+Version:	1.04
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	325f97ccd5255aa05f5605241da5e1e8
+# Source0-md5:	5ae8851689ba4be5e0b08b0fb2c242d3
 BuildRequires:	freetds-devel
 BuildRequires:	perl-DBI >= 1.00
 BuildRequires:	rpm-perlprov >= 4.1-13
