@@ -9,6 +9,7 @@ Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	b3e905acf6fe894b59112d94a00e4c1f
 BuildRequires:	freetds-devel
 BuildRequires:	perl-DBI >= 1.00
 BuildRequires:	rpm-perlprov >= 4.1-13
