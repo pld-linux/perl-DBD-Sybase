@@ -4,8 +4,8 @@
 Summary:	DBD::Sybase perl module
 Summary(pl):	Modu³ perla DBD::Sybase
 Name:		perl-DBD-Sybase
-Version:	0.94
-Release:	2
+Version:	0.95
+Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
