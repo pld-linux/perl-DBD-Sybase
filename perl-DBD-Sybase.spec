@@ -38,14 +38,12 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 install eg/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-gzip -9nf BUGS CHANGES README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc BUGS CHANGES README
 %{perl_sitearch}/DBD/Sybase.pm
 %dir %{perl_sitearch}/auto/DBD/Sybase
 %{perl_sitearch}/auto/DBD/Sybase/Sybase.bs
