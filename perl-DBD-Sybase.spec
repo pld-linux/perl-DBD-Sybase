@@ -5,7 +5,7 @@ Summary:	DBD::Sybase - Sybase database driver for the DBI module
 Summary(pl):	DBD::Sybase - staerownik DBI do bazy danych Sybase
 Name:		perl-DBD-Sybase
 Version:	1.04
-Release:	1
+Release:	1.1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
