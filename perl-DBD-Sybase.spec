@@ -2,7 +2,7 @@
 %define		pdir	DBD
 %define		pnam	Sybase
 Summary:	DBD::Sybase - Sybase database driver for the DBI module
-Summary(pl):	DBD::Sybase - sterownik DBI do bazy danych Sybase
+Summary(pl.UTF-8):   DBD::Sybase - sterownik DBI do bazy danych Sybase
 Name:		perl-DBD-Sybase
 Version:	1.07
 Release:	2
@@ -22,11 +22,11 @@ provide access to Sybase databases. With FreeTDS DBD::Sybase can be
 also used to query a MS-SQL 7 or 2000 database server from a
 UNIX/Linux host.
 
-%description -l pl
-DBD::Sybase jest modu³em Perla wspó³pracuj±cym z modu³em DBI i
-umo¿liwiaj±cym dostêp do baz danych Sybase. Przy wykorzystaniu
-FreeTDS, DBD::Sybase mo¿na równie¿ wykorzystaæ do dostêpu z poziomu
-UNIX-a/Linuksa do serwerów bazodanowych MS-SQL 7 lub 2000.
+%description -l pl.UTF-8
+DBD::Sybase jest moduÅ‚em Perla wspÃ³Å‚pracujÄ…cym z moduÅ‚em DBI i
+umoÅ¼liwiajÄ…cym dostÄ™p do baz danych Sybase. Przy wykorzystaniu
+FreeTDS, DBD::Sybase moÅ¼na rÃ³wnieÅ¼ wykorzystaÄ‡ do dostÄ™pu z poziomu
+UNIX-a/Linuksa do serwerÃ³w bazodanowych MS-SQL 7 lub 2000.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
