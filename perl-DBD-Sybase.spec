@@ -2,7 +2,7 @@
 %define		pdir	DBD
 %define		pnam	Sybase
 Summary:	DBD::Sybase - Sybase database driver for the DBI module
-Summary(pl.UTF-8):   DBD::Sybase - sterownik DBI do bazy danych Sybase
+Summary(pl.UTF-8):	DBD::Sybase - sterownik DBI do bazy danych Sybase
 Name:		perl-DBD-Sybase
 Version:	1.07
 Release:	2
