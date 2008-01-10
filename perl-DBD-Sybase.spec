@@ -39,6 +39,7 @@ SYBASE=/usr ; export SYBASE
 	INSTALLDIRS=vendor
 
 %{__make} \
+	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
 
 %install
