@@ -26,7 +26,7 @@ UNIX/Linux host.
 DBD::Sybase jest modułem Perla współpracującym z modułem DBI i
 umożliwiającym dostęp do baz danych Sybase. Przy wykorzystaniu
 FreeTDS, DBD::Sybase można również wykorzystać do dostępu z poziomu
-UNIX-a/Linuksa do serwerów bazodanowych MS-SQL 7 lub 2000.
+Uniksa/Linuksa do serwerów bazodanowych MS-SQL 7 lub 2000.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
