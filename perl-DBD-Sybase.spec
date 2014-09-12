@@ -60,7 +60,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc BUGS CHANGES README
 %{perl_vendorarch}/DBD/Sybase.pm
 %dir %{perl_vendorarch}/auto/DBD/Sybase
-%{perl_vendorarch}/auto/DBD/Sybase/Sybase.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/DBD/Sybase/Sybase.so
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
