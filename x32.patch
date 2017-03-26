@@ -1,11 +1,12 @@
---- DBD-Sybase-1.14/Makefile.PL~	2015-04-06 10:12:39.000000000 +0000
-+++ DBD-Sybase-1.14/Makefile.PL	2015-04-06 10:13:23.243985039 +0000
-@@ -134,7 +134,7 @@
+diff -ruN DBD-Sybase-1.15.orig/Makefile.PL DBD-Sybase-1.15/Makefile.PL
+--- DBD-Sybase-1.15.orig/Makefile.PL	2012-10-26 21:11:54.000000000 +0200
++++ DBD-Sybase-1.15/Makefile.PL	2017-03-26 13:21:48.539143938 +0200
+@@ -139,7 +139,7 @@
  
  	my $libfound = 0;
  	my $libsub   = '';
--	foreach $libdir ( 'lib', 'lib64' ) {
-+	foreach $libdir ( 'lib', 'lib64', 'libx32' ) {
- 		if ( -d "$SYBASE/$libdir" ) {
- 			if ( checkLib($SYBASE) ) {
- 				$libfound = 1;
+-  my @libdir = ( 'lib', 'lib64' );
++  my @libdir = ( 'lib', 'lib64', 'libx32' );
+   if ($^O =~ /win/i) {
+     @libdir = ( 'dll' );
+   }
