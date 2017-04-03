@@ -50,6 +50,9 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# packaged as man
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/DBD/dbd-sybase.pod
+
 install eg/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
@@ -61,5 +64,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/DBD/Sybase.pm
 %dir %{perl_vendorarch}/auto/DBD/Sybase
 %attr(755,root,root) %{perl_vendorarch}/auto/DBD/Sybase/Sybase.so
-%{_mandir}/man3/*
+%{_mandir}/man3/DBD::Sybase.3*
 %{_examplesdir}/%{name}-%{version}
