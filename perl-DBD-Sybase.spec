@@ -31,7 +31,7 @@ Uniksa/Linuksa do serwerów bazodanowych MS-SQL 7 lub 2000.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 SYBASE=/usr ; export SYBASE
